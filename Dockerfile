@@ -1,7 +1,8 @@
 FROM node:22-alpine AS deps
 WORKDIR /app
 COPY package.json ./
-RUN npm install --no-audit --no-fund
+RUN npm install --global npm@11.6.0 \
+    && npm install --no-audit --no-fund
 
 FROM node:22-alpine AS builder
 WORKDIR /app
