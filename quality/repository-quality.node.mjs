@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { repositoryQualityScore, isRepositoryReady } from '../quality/coverage-target.mjs';
+import { repositoryQualityScore, isRepositoryReady } from './coverage-target.mjs';
 
 test('calcula o percentual de qualidade', () => {
   assert.equal(repositoryQualityScore(20, 20), 100);
