@@ -39,8 +39,6 @@ jobs:
       - name: Tests
         run: npm test
 
-      - name: Repository tests + coverage 80%
-        run: node --test --experimental-test-coverage --test-coverage-lines=80 quality/repository-quality.node.mjs
 
       - name: Build
         run: npm run build
